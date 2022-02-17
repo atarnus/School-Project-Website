@@ -1,0 +1,261 @@
+.header {
+    background-image: url("../images/header2.jpg");
+    background-repeat: repeat-x;
+    height: 100px;
+    margin: -10px -10px 0 -10px;
+    font-family: 'Moon Dance', cursive;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 15px;
+    text-align: center;
+    text-shadow: 1px 2px 2px #D0D4C8;
+}
+
+.gallery {
+    width: 800px;
+    height: 600px;
+}
+
+.border {
+    width: 400px;
+    height: 300px;
+    border: solid 3px #343148;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+/* Text */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #B4B8AD;
+    color: #343148;
+}
+
+.page {
+    display: none;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+a:hover, a:focus, a:active {
+    color: #ECF0E4;
+}
+
+/* Navigation Menu */
+.navpanel {
+    background-color: #343148;
+    height: 30px;
+    text-align: center;
+    margin: -10px -10px 0 -10px;
+    padding: 0;
+}
+
+.nav {
+    font-family: 'Special Elite', cursive;
+    color: #D0D4C8;
+    background-color: #343148;
+    border: 0;
+    border-radius: 8px 8px 0 0;
+    height: 30px;
+    padding: 0 20px;
+
+}
+
+.nav:hover {
+    color: #ECF0E4;
+}
+
+.active, .active:hover {
+    color: #343148;
+    text-shadow: 1px 0 1px;
+    background-color: #B4B8AD;
+
+}
+
+
+/* .active:hover {
+    text-decoration: underline;
+    color: #343148;
+
+
+} */
+
+
+/* Icons */
+
+.icon {
+    height: 25px;
+}
+
+.icon-s {
+    height: "15px";
+    margin-bottom: -3px;
+}
+
+
+/* Paint Testing */
+div {
+    margin: auto;
+}
+
+.bg {
+    width: 900px;
+    margin: 25px auto;
+}
+
+.paint {
+    width: 720px;
+    height: 340px;
+}
+
+.col-50, .col-50-l, .col-50-r {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+/* Round Corners for Paint Testing */
+
+#right-top {
+    border-top-right-radius: 8px;
+}
+
+#left-top {
+    border-top-left-radius: 8px;
+}
+
+#right-bot {
+    border-bottom-right-radius: 8px;
+}
+
+#left-bot {
+    border-bottom-left-radius: 8px;
+}
+
+/* Image for Paint Testing */
+
+.col-50-l img, .col-50-r img {
+    display: block;
+    width: 360px;
+    height: 240px;
+}
+
+.col-50-l img {
+    border-bottom-left-radius: 8px;
+}
+
+.col-50-r img {
+    border-bottom-right-radius: 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wall-text {
+    padding: 45px 0;
+    display: inline-block;
+    filter: brightness(70%);
+    font-size: 14px;
+    font-family: 'Special Elite', cursive;
+}
+
+/* Resizing for smaller screens */
+
+@media (max-width: 890px) {
+    .bg {
+        width: 450px;
+    }
+
+    .paint {
+        width: 360px;
+        height: 170px;
+    }
+
+    .col-50-l img, .col-50-r img {
+        width: 180px;
+        height: 120px;
+    }
+
+    .from-top {
+        padding: 23px 0;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .bg {
+        width: 315px;
+    }
+
+    .paint {
+        width: 252px;
+        height: 119px;
+    }
+
+    .col-50-l img, .col-50-r img {
+        width: 126px;
+        height: 84px;
+    }
+
+    .from-top {
+        padding: 16px 0;
+        font-size: 10px;
+    }
+}
+
+/* Color Pallette */
+
+#c01 { background-color: #DD4132}
+#c02 { background-color: #9E1030}
+#c03 { background-color: #FE840E}
+#c04 { background-color: #FF6F61}
+#c05 { background-color: #C62168}
+#c06 { background-color: #8D9440}
+#c07 { background-color: #FFD662}
+#c08 { background-color: #00539C}
+#c09 { background-color: #755139}
+#c10 { background-color: #D69C2F}
+#c11 { background-color: #616247}
+#c12 { background-color: #E8B5CE}
+#c13 { background-color: #D2C29D}
+#c14 { background-color: #343148}
+#c15 { background-color: #F0EAD6}
+#c16 { background-color: #615550}
+
+button.c {
+    width: 40px;
+    height: 25px;
+    border: 0;
+    border-radius: 8px;
+    filter: drop-shadow(1px 1px 1px);
+    margin: 3px;
+    font-size: 0;
+}
+
+button.c:hover {
+    filter: brightness(90%) drop-shadow(1px 1px 1px);
+}
+
+button.c:active {
+    filter: brightness(70%);
+}
+
+.pallette {
+    width: 400px;
+    background-color: #484762;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 0;
+}

@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kotkantien maalaus ja tapetointi</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&Roboto:wght@300;700&family=Special+Elite&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+                // Page Navigation
+
+                $("#n1").click(function(){
+                    $("#p1").slideDown("fast");
+                    $("#p2").slideUp("fast");
+                    $("#p3").slideUp("fast");
+                    $("#p4").slideUp("fast");
+                    $("#p5").slideUp("fast");
+                    $(".nav").removeClass("active");                    
+                    $("#n1").addClass("active");
+                });
+                $("#n2").click(function(){
+                    $("#p2").slideDown("fast");
+                    $("#p1").slideUp("fast");
+                    $("#p3").slideUp("fast");
+                    $("#p4").slideUp("fast");
+                    $("#p5").slideUp("fast");
+                    $(".nav").removeClass("active");                    
+                    $("#n2").addClass("active");
+                });
+                $("#n3").click(function(){
+                    $("#p3").slideDown("fast");
+                    $("#p1").slideUp("fast");
+                    $("#p2").slideUp("fast");
+                    $("#p4").slideUp("fast");
+                    $("#p5").slideUp("fast");
+                    $(".nav").removeClass("active");                    
+                    $("#n3").addClass("active");
+                });
+                $("#n4").click(function(){
+                    $("#p4").slideDown("fast");
+                    $("#p1").slideUp("fast");
+                    $("#p2").slideUp("fast");
+                    $("#p3").slideUp("fast");
+                    $("#p5").slideUp("fast");
+                    $(".nav").removeClass("active");                    
+                    $("#n4").addClass("active");
+                });
+                $("#n5").click(function(){
+                    $("#p5").slideDown("fast");
+                    $("#p1").slideUp("fast");
+                    $("#p2").slideUp("fast");
+                    $("#p3").slideUp("fast");
+                    $("#p4").slideUp("fast");
+                    $(".nav").removeClass("active");                    
+                    $("#n5").addClass("active");
+                });
+
+                // Colour Picker
+
+                $(".c").click(function(){
+                    let cclick = $(this).css("background-color");
+                    $(".col-50-r").css("background-color", cclick);
+                    $("#right-text").text(this.value);
+                    $("#right-text").css("color", cclick);
+                });
+                
+                $(".c").hover(function(){
+                    let chover = $(this).css("background-color");
+                    $(".col-50-l").css("background-color", chover);
+                    $("#left-text").text(this.value);
+                    if (this.value == "Eclipse") {
+                        $("#left-text").css("color", "#B1ACC8");
+
+                    } else {
+                        $("#left-text").css("color", chover);
+                    }
+                },
+                function(){
+                    $(".col-50-l").css("background-color", "");    
+                    $("#left-text").html("&nbsp;");                
+                });
+
+                // Links
+
+                $("#fb-icon").hover(function(){
+                    $(this).attr("src", "images/facebook_a.svg");
+                },
+                function(){
+                    $(this).attr("src", "images/facebook.svg");                  
+                });
+
+                $("#ig-icon").hover(function(){
+                    $(this).attr("src", "images/instagram_a.svg");
+                },
+                function(){
+                    $(this).attr("src", "images/instagram.svg");                  
+                });
+
+
+                // $(".c").dblclick(function(){
+                //     let cdblclick = $(this).css("background-color");
+                //     $(".col-left").css("background-color", cdblclick);
+                // });
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class="header">Kotkantien maalaus ja tapetointi</div>
+
+        <!-- Navigaatiopalkki -->
+
+        <div class="navpanel">
+            <button class="nav" id="n1" name="navbar">Etusivu</button><button class="nav" id="n2">Palvelut</button><button class="nav" id="n3">Värien testaus</button><button class="nav" id="n4">Galleria</button><button class="nav" id="n5">Yhteystiedot</button>
+        </div>
+        <div class="bg">
+
+            <!-- Etusivu -->
+
+            <div class="page" id="p1">
+                Etusivuhommeleita
+            </div>
+
+            <!-- Palvelut -->
+
+            <div class="page" id="p2">
+                <div class="row">
+                    <div class="col-50">
+                        <img class="border" src="images/left.png">
+                    </div>
+                    <div class="col-50">
+                        <h3>Tapetointi</h3>
+                        diipadaapa
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-50"></div>
+                    <div class="col-50">
+                        <h3>Maalaus</h3>
+                        pappaduuda</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Värien testaus -->
+
+            <div class="page" id="p3">
+                <div class="paint">
+                    <div class="row">
+                        <div class="col-50-l" id="left-top"><li class="wall-text" id="left-text">&nbsp;</li></div>
+                        <div class="col-50-r" id="right-top"><li class="wall-text" id="right-text">&nbsp;</li></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-50-l" id="left-bot"><img class="block-img" src="images/left.png"></div>
+                        <div class="col-50-r" id="right-bot"><img class="block-img" src="images/right.png"></div>
+                    </div>
+                </div>
+                <div class="pallette"> 
+                <button class="c" id="c01" value="Fiesta"></button><button class="c" id="c02" value="Jester Red"></button><button class="c" id="c03" value="Turmeric"></button><button class="c" id="c04" value="Living Coral"></button><button class="c" id="c05" value="Pink Peacock"></button><button class="c" id="c06" value="Pepper Stem"></button><button class="c" id="c07" value="Aspen Gold"></button><button class="c" id="c08" value="Princess Blue"></button><br>
+                <button class="c" id="c09" value="Toffee"></button><button class="c" id="c10" value="Mango Mojito"></button><button class="c" id="c11" value="Terrarium Moss"></button><button class="c" id="c12" value="Sweet Lilac"></button><button class="c" id="c13" value="Soybean"></button><button class="c" id="c14" value="Eclipse"></button><button class="c" id="c15" value="Sweet Corn"></button><button class="c" id="c16" value="Brown Granite"></button><br>
+                Klikkaa väriä vaihtaaksesi seinän väriä oikealla puolella. Siirrä kursoria vaihtaaksesi väriä vasemmalla puolella.
+                * mitä tehdään mobiililla? doubletap?
+                </div>
+            </div>
+
+            <!-- Galleria -->
+
+            <div class="page" id="p4">
+                Galleria
+                <iframe class="gallery" src="gallery.html"></iframe>
+            </div>
+
+            <!-- Yhteystiedot -->
+
+            <div class="page" id="p5">
+
+                <div class="row">
+                    <div class="col-50">
+                        <p>
+                            <h3>Kotkantien maalaus ja tapetointi</h3>
+                            Kotkantie 3,<br>
+                            90100 Oulu</p>
+                        <p>
+                            <img class="icon-s" src="images/telephone-fill.svg"> 044 999 888 99<br>
+                            <a href="mailto:info@kotkantienmaalaus.fi"><img class="icon-s" src="images/envelope-fill.svg"> info@kotkantienmaalaus.fi<br></a>
+                        </p>
+                        <p>
+                            <a href="https://www.facebook/kotkantienmaalaus/" target="_blank"><img class="icon" id="fb-icon" src="images/facebook.svg" alt="Facebook Page"></a> 
+                            <a href="https://www.instagram/kotkantienmaalaus/" target="_blank"><img class="icon" id="ig-icon" src="images/instagram.svg" alt="Instagram Page"></a>
+                        </p>
+                    </div>
+                    <div class="col-50">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-50">
+                        <iframe class="border" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4632.995677617792!2d25.50554444171836!3d65.0025557668624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd5ab648863f%3A0x6a3916ef872dc54b!2sKotkantie%203%2C%2090250%20Oulu!5e0!3m2!1sfi!2sfi!4v1645001663599!5m2!1sfi!2sfi" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            
+        </div>
+        <!-- 
+        <script src="js/jquery-3.6.0.js"></script>
+        <script src="js/script.js">
+            // paintLeft() {
+            //     document.getElementbyId("")
+            // }
+        
+        </script> -->
+
+    </body>
+</html>
