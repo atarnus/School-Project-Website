@@ -99,9 +99,13 @@ $(document).ready(function(){
         $(this).attr("src", "images/instagram.svg");                  
     });
 
+    $(".thumb").click(function(){
+        let shownimage = $(this).attr("src");
+        $("#shown").attr("src", shownimage);
+    });
 
-    // $(".c").dblclick(function(){
-    //     let cdblclick = $(this).css("background-color");
-    //     $(".col-left").css("background-color", cdblclick);
-    // });
+/*     $(".c").dblclick(function(){
+        let cdblclick = $(this).css("background-color");
+        $(".col-left").css("background-color", cdblclick);
+    }); */
 });
