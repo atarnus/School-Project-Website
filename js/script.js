@@ -10,9 +10,9 @@ $(document).ready(function(){
         $("#p5").slideUp("fast");
         $(".nav").removeClass("active");
         $("#header").slideUp("fast");
-        $("body").css("overflow", "hidden");  
-
+        $("body").css("overflow", "hidden");
     });
+
     $("#n2").click(function(){
         $("#p2").slideDown("fast");
         $("#p1").slideUp("fast");
@@ -24,6 +24,7 @@ $(document).ready(function(){
         $("#header").slideDown("fast");
         $("body").css("overflow", "visible");
     });
+
     $("#n3").click(function(){
         $("#p3").slideDown("fast");
         $("#p1").slideUp("fast");
@@ -35,6 +36,7 @@ $(document).ready(function(){
         $("#header").slideDown("fast");
         $("body").css("overflow", "visible");
     });
+
     $("#n4").click(function(){
         $("#p4").slideDown("fast");
         $("#p1").slideUp("fast");
@@ -46,6 +48,7 @@ $(document).ready(function(){
         $("#header").slideDown("fast");
         $("body").css("overflow", "visible");
     });
+    
     $("#n5").click(function(){
         $("#p5").slideDown("fast");
         $("#p1").slideUp("fast");
@@ -64,7 +67,11 @@ $(document).ready(function(){
         let cclick = $(this).css("background-color");
         $(".col-50-l").css("background-color", cclick);
         $("#left-text").text(this.value);
-        $("#left-text").css("color", cclick);
+        if (this.value == "Eclipse") {
+            $("#left-text").css("color", "#B1ACC8");
+        } else {
+            $("#left-text").css("color", cclick);
+        }
     });
     
     $(".c").hover(function(){
@@ -73,7 +80,6 @@ $(document).ready(function(){
         $("#right-text").text(this.value);
         if (this.value == "Eclipse") {
             $("#right-text").css("color", "#B1ACC8");
-
         } else {
             $("#right-text").css("color", chover);
         }
@@ -108,4 +114,28 @@ $(document).ready(function(){
         let cdblclick = $(this).css("background-color");
         $(".col-left").css("background-color", cdblclick);
     }); */
+
+    $("#submit").click(function(){
+        if (document.forms["contactform"]["name"].value == "") {
+            alert("Kirjoita nimesi.");
+            return false;
+        } else if (document.forms["contactform"]["subject"].value == "none") {
+            alert("Valitse aihe.");
+            return false;
+        } else if (
+            document.forms["contactform"]["subject"].value == "tarjous" &&
+            document.forms["contactform"]["email"].value == "" &&
+            document.forms["contactform"]["phone"].value == ""
+        ) {
+            alert("Jätä yhteystietosi, jotta voimme toimittaa tarjouksen.");
+            return false;
+        } else if (document.forms["contactform"]["message"].value.length < 1) {
+            alert("Kirjoita viesti.");
+            return false;
+        } else {
+            alert("Kiitos yhteydenotostasi!");
+            return true;
+        }
+    });
+
 });

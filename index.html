@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Exo+2:wght@300;800&Roboto:wght@300;700&family=Special+Elite&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Exo+2:wght@300;800&family=Special+Elite&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <script src="js/jquery-3.6.0.js"></script>
         <script src="js/script.js"></script>
@@ -63,22 +63,30 @@
             <!-- Värien testaus -->
 
             <div class="page" id="p3">
+                <h3>Testaa näitä poimittuja sävyjä valikoimastamme</h3>
                 <div class="paint">
-                    <div class="row">
+                    <div class="row" id="paint-top">
                         <div class="col-50-l" id="left-top"><li class="wall-text" id="left-text">&nbsp;</li></div>
                         <div class="col-50-r" id="right-top"><li class="wall-text" id="right-text">&nbsp;</li></div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="paint-bottom">
                         <div class="col-50-l" id="left-bot"><img class="block-img" src="images/sofaleft.png"></div>
                         <div class="col-50-r" id="right-bot"><img class="block-img" src="images/sofaright.png"></div>
                     </div>
                 </div>
-                <div class="pallette"> 
-                <button class="c" id="c01" value="Fiesta"></button><button class="c" id="c02" value="Jester Red"></button><button class="c" id="c03" value="Turmeric"></button><button class="c" id="c04" value="Living Coral"></button><button class="c" id="c05" value="Pink Peacock"></button><button class="c" id="c06" value="Pepper Stem"></button><button class="c" id="c07" value="Aspen Gold"></button><button class="c" id="c08" value="Princess Blue"></button><br>
-                <button class="c" id="c09" value="Toffee"></button><button class="c" id="c10" value="Mango Mojito"></button><button class="c" id="c11" value="Terrarium Moss"></button><button class="c" id="c12" value="Sweet Lilac"></button><button class="c" id="c13" value="Soybean"></button><button class="c" id="c14" value="Eclipse"></button><button class="c" id="c15" value="Sweet Corn"></button><button class="c" id="c16" value="Brown Granite"></button><br>
-                Klikkaa väriä vaihtaaksesi seinän väriä oikealla puolella. Siirrä kursoria vaihtaaksesi väriä vasemmalla puolella.
-                * mitä tehdään mobiililla? doubletap?
+                <div class="row">
+                    <div class="col-25">
+                        Siirrä kursoria väripainikkeen päälle vaihtaaksesi väriä vasemmalla puolella. Klikkaa väripainiketta vaihtaaksesi seinän väriä vasemmalla puolella.
+                    </div>
+                    <div class="col-50-c">
+                            <button class="c" id="c01" value="Fiesta"></button><button class="c" id="c02" value="Jester Red"></button><button class="c" id="c03" value="Turmeric"></button><button class="c" id="c04" value="Living Coral"></button><button class="c" id="c05" value="Pink Peacock"></button><button class="c" id="c06" value="Pepper Stem"></button><button class="c" id="c07" value="Aspen Gold"></button><button class="c" id="c08" value="Princess Blue"></button><br>
+                            <button class="c" id="c09" value="Toffee"></button><button class="c" id="c10" value="Mango Mojito"></button><button class="c" id="c11" value="Terrarium Moss"></button><button class="c" id="c12" value="Sweet Lilac"></button><button class="c" id="c13" value="Soybean"></button><button class="c" id="c14" value="Eclipse"></button><button class="c" id="c15" value="Sweet Corn"></button><button class="c" id="c16" value="Brown Granite"></button><br>
+                    </div>
+                    <div class="col-25">
+
+                    </div>
                 </div>
+
             </div>
 
             <!-- Galleria -->
@@ -114,20 +122,40 @@
                             90100 Oulu
                         </p>
                         <p>
-                            <img class="icon-s" src="images/telephone-fill.svg"> 044 999 888 99<br>
+                            <a href="tel:+3584499988899"><img class="icon-s" src="images/telephone-fill.svg"> 044 999 888 99</a><br>
                             <a href="mailto:info@kotkantienmaalaus.fi"><img class="icon-s" src="images/envelope-fill.svg"> info@kotkantienmaalaus.fi<br></a>
                         </p>
                         <p>
                             <a href="https://www.facebook/kotkantienmaalaus/" target="_blank"><img class="icon" id="fb-icon" src="images/facebook.svg" alt="Facebook Page"></a> 
                             <a href="https://www.instagram/kotkantienmaalaus/" target="_blank"><img class="icon" id="ig-icon" src="images/instagram.svg" alt="Instagram Page"></a>
                         </p>
+                        <iframe class="border" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4632.995677617792!2d25.50554444171836!3d65.0025557668624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd5ab648863f%3A0x6a3916ef872dc54b!2sKotkantie%203%2C%2090250%20Oulu!5e0!3m2!1sfi!2sfi!4v1645001663599!5m2!1sfi!2sfi" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                     <div class="col-50">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-50-c">
-                        <iframe class="border" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4632.995677617792!2d25.50554444171836!3d65.0025557668624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4681cd5ab648863f%3A0x6a3916ef872dc54b!2sKotkantie%203%2C%2090250%20Oulu!5e0!3m2!1sfi!2sfi!4v1645001663599!5m2!1sfi!2sfi" allowfullscreen="" loading="lazy"></iframe>
+
+
+                        <form id="contactform">
+                            <h3 class="margin">Ota yhteyttä:</h3>
+                            <p>
+                            <label for="name">Nimi:</label><br>
+                            <input type="text" name="name" id="name"><br>
+                            <label for="phone">Puhelinnumero:</label><br>
+                            <input type="text" name="phone" id="phone"><br>
+                            <label for="email">Sähköposti:</label><br>
+                            <input type="email" name="email" id="email"><br>
+                            <label for="subject">Aihe:</label><br>
+                            <select id="subject" name="subject">
+                                <option value="tarjous">Tarjouspyyntö</option>
+                                <option value="palaute">Palaute</option>
+                                <option value="muu">Muu asia</option>
+                                <option value="none" selected disabled hidden>Valitse</option>
+                            </select><br>
+                            <label for="message">Viesti:</label><br>
+                            <textarea id="message" name="viesti"></textarea><br>
+                            <button id="submit">Lähetä</button>
+                        </p>
+                        </form>
+
                     </div>
                 </div>
             </div>
