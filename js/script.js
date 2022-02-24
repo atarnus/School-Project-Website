@@ -1,63 +1,72 @@
+/* To do:
+Colour picker button hover as doubletap in mobile
+Active thumbnail in gallery
+(Gallery next image)
+
+Changes since last push:
+Navigating: Changed slideIn/Out (fast) into fadeIn/Out (400/0) for smoother feel.
+ */
+
 $(document).ready(function(){
                 
     // Page Navigation
 
     $("#n1").click(function(){
-        $("#p1").slideDown("fast");
-        $("#p2").slideUp("fast");
-        $("#p3").slideUp("fast");
-        $("#p4").slideUp("fast");
-        $("#p5").slideUp("fast");
+        $("#p1").fadeIn(400);
+        $("#p2").fadeOut(0);
+        $("#p3").fadeOut(0);
+        $("#p4").fadeOut(0);
+        $("#p5").fadeOut(0);
         $(".nav").removeClass("active");
-        $("#header").slideUp("fast");
+        $("#header").fadeOut(0);
         $("body").css("overflow", "hidden");
     });
 
     $("#n2").click(function(){
-        $("#p2").slideDown("fast");
-        $("#p1").slideUp("fast");
-        $("#p3").slideUp("fast");
-        $("#p4").slideUp("fast");
-        $("#p5").slideUp("fast");
+        $("#p2").fadeIn(400);
+        $("#p1").fadeOut(0);
+        $("#p3").fadeOut(0);
+        $("#p4").fadeOut(0);
+        $("#p5").fadeOut(0);
         $(".nav").removeClass("active");                    
         $("#n2").addClass("active");
-        $("#header").slideDown("fast");
+        $("#header").fadeIn(400);
         $("body").css("overflow", "visible");
     });
 
     $("#n3").click(function(){
-        $("#p3").slideDown("fast");
-        $("#p1").slideUp("fast");
-        $("#p2").slideUp("fast");
-        $("#p4").slideUp("fast");
-        $("#p5").slideUp("fast");
+        $("#p3").fadeIn(400);
+        $("#p1").fadeOut(0);
+        $("#p2").fadeOut(0);
+        $("#p4").fadeOut(0);
+        $("#p5").fadeOut(0);
         $(".nav").removeClass("active");                    
         $("#n3").addClass("active");
-        $("#header").slideDown("fast");
+        $("#header").fadeIn(400);
         $("body").css("overflow", "visible");
     });
 
     $("#n4").click(function(){
-        $("#p4").slideDown("fast");
-        $("#p1").slideUp("fast");
-        $("#p2").slideUp("fast");
-        $("#p3").slideUp("fast");
-        $("#p5").slideUp("fast");
+        $("#p4").fadeIn(400);
+        $("#p1").fadeOut(0);
+        $("#p2").fadeOut(0);
+        $("#p3").fadeOut(0);
+        $("#p5").fadeOut(0);
         $(".nav").removeClass("active");                    
         $("#n4").addClass("active");
-        $("#header").slideDown("fast");
+        $("#header").fadeIn(400);
         $("body").css("overflow", "visible");
     });
     
     $("#n5").click(function(){
-        $("#p5").slideDown("fast");
-        $("#p1").slideUp("fast");
-        $("#p2").slideUp("fast");
-        $("#p3").slideUp("fast");
-        $("#p4").slideUp("fast");
+        $("#p5").fadeIn(400);
+        $("#p1").fadeOut(0);
+        $("#p2").fadeOut(0);
+        $("#p3").fadeOut(0);
+        $("#p4").fadeOut(0);
         $(".nav").removeClass("active");                    
         $("#n5").addClass("active");
-        $("#header").slideDown("fast");
+        $("#header").fadeIn(400);
         $("body").css("overflow", "visible");
     });
 
