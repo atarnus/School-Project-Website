@@ -114,6 +114,13 @@ $(document).ready(function(){
         $(this).attr("src", "images/instagram.svg");                  
     });
 
+    $("#yt-icon").hover(function(){
+        $(this).attr("src", "images/youtube_a.svg");
+    },
+    function(){
+        $(this).attr("src", "images/youtube.svg");                  
+    });
+
     $(".thumb").click(function(){
         let shownimage = $(this).attr("src");
         $("#shown").attr("src", shownimage);

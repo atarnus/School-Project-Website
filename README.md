@@ -1,5 +1,7 @@
 # School-Project-Website
 
-Html CSS jQuery
+Html, CSS, JavaScript, jQuery
 
-Backup copy
+Fonts from Googlefonts.
+Images from Canva, edited in PhotoShop.
+SVG Icons from https://icons.getbootstrap.com/.

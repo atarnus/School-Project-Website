@@ -1,12 +1,12 @@
 /* To do:
-Scaling!
-Front Page background color?
+More Scaling! + mobile-menu?
+Front Page background color? - dark footer? maybe baby?
 different images for mobile?
 
 Changes since last push:
 Paint testing div rehaul
+Scaling works down to 675px
 */
-
 
 /* Header */
 
@@ -20,11 +20,11 @@ Paint testing div rehaul
     font-size: 50px;
     font-weight: 800;
     padding-top: 15px;
-    color:#adc57c;
+    color: #b4cc82;
     text-shadow: 3px 3px 2px #343148;
 }
 
-/* Body & Divs */
+/* Body & Common Divs */
 
 body {
     font-family: 'Exo 2', sans-serif;
@@ -77,8 +77,6 @@ div.col-22 {
     text-align: left;
 }
 
-
-
 .row:after {
     content: "";
     display: table;
@@ -109,7 +107,7 @@ h1 {
     font-family: 'Exo 2', sans-serif;
     font-size: 3vw;
     font-weight: 800;
-    color: #adc57c;
+    color: #b4cc82;
     text-shadow: 3px 3px 2px #343148;
     padding-top: 15%;
 }
@@ -126,10 +124,6 @@ h3 {
     font-size: 34px;
     font-weight: 700;
     margin: 25px 0;
-}
-
-h3.margin {
-    margin: 25px 10%;
 }
 
 a {
@@ -153,7 +147,7 @@ a:hover, a:focus, a:active {
 
 .nav {
     font-family: 'Special Elite', cursive;
-    color: #adc57c;
+    color: #b4cc82;
     font-size: 22px;
     background-color: #343148;
     border: 0;
@@ -192,7 +186,6 @@ img.thumb {
 
 img.thumb:hover {
     border: solid 2px #343148;
-
 }
 
 img.medium {
@@ -213,7 +206,8 @@ img.medium {
 /* Icons */
 
 .icon {
-    height: 30px;
+    width: 30px;
+    padding: 3px;
 }
 
 .icon-s {
@@ -221,20 +215,22 @@ img.medium {
     margin-bottom: -3px;
 }
 
-/* Forms */
-form {
-    margin-left: 10%;
+/* Form */
+
+#form {
+    width: 70%;
 }
 
 label {
     font-size: 16px;
+    float: left;
 }
 
 input, select, textarea, #submit {
     box-sizing: border-box;
     margin-bottom: 5px;
     height: 28px;
-    width: 50%;
+    width: 100%;
     border-radius: 6px;
     font-size: 16px;
     background-color: #DDE0D6;
@@ -242,7 +238,8 @@ input, select, textarea, #submit {
 }
 
 #submit {
-    width: 20%;
+    float: left;
+    width: 25%;
     background-color: #8C8F85;
     filter: drop-shadow(1px 1px 1px #343148)
 }
@@ -272,31 +269,35 @@ div.paint {
 }
 
 div.pallette {
+    line-height: 0;
     float: left;
     width: 42%;
-    height: 100%;
+    height: 80%;
+    margin: 12px;
     text-align: center;
-    margin: 1% 0;
 }
 
 #leftside {
-    width: 29%;
+    width: 25%;
     text-align: left;
+    line-height: normal;
 }
 
 #cleardiv {
-    width: 7%;
+    width: 5%;
 }
 
 #rightside {
-    width: 22%;
+    width: 20%;
     text-align: right;
+    line-height: normal;
 }
 
 #pallette-row {
     height: 20%;
     background-color: #515162;
     border-radius: 0 0 8px 8px;
+    /* padding: 1% 2%; */
 }
 
 #paint-top {
@@ -321,7 +322,7 @@ div.pallette {
     font-size: 17px;
     font-style: italic;
     color:#A6A99F;
-    margin: 1% 8% 1% 6%;
+    margin: 1%;
 }
 
 .col-50-l img, .col-50-r img {
@@ -341,13 +342,13 @@ div.pallette {
 /* Color Buttons */
 
 button.c {
+    box-sizing: border-box;
     width: 60px;
     height: 40px;
     border: 0;
     border-radius: 8px;
     filter: drop-shadow(1px 1px 1px);
-    margin: 3px;
-    font-size: 0;
+    margin: 3px 0;
 }
 
 #c01 { background-color: #DD4132}
@@ -368,7 +369,9 @@ button.c {
 #c16 { background-color: #615550}
 #clear {
     background-color: #A6A99F;
-    font-size: 18px;
+    background-image: url("../images/x.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     font-family: 'Dancing Script', cursive;
 }
 
@@ -382,80 +385,154 @@ button.c:active {
 
 /* Resizing for Different Screens */
 
-/* @media (max-width: 1920px) and (min-width: 1081px) {
+/* @media (min-width: 1921px) {
 
+} */
 
-    .paint {
-        width: 1080px;
-        height: 420px;
+@media (max-width: 1440px) {
+
+    #header {
+        height: 80px;
+        font-size: 40px;
+        font-weight: 800;
+        padding-top: 12px;
     }
-    
+
+    body {font-size: 18px;}
+    h3 {font-size: 32px;}
+
+    div.wide {
+        width: 992px;
+        margin: 20px auto;
+    }
+    div.narrow {width: 800px;}
+
+    /* Services */
+
+    img.medium {
+        width: 336px;
+        height: 235px;
+    }
+
+    /* Paint Testing */
+
+    .wall-text {font-size: 18px;}
+    .ctest {font-size: 13px;}
+    div.pallette {margin: 6px 9px;}
+    div.paint {
+        width: 972px;
+        height: 450px;
+    }
+
+    button.c {
+        width: 45px;
+        height: 30px;
+    }
+
     .col-50-l img, .col-50-r img {
-        display: block;
-        width: 540px;
+        width: 486px;
+        height: 270px;
+    }
+
+    /* Gallery */
+
+    #shown {width: 750px;}
+
+    img.thumb {
+        width: 98px;
+        height: 65px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+
+    /* Contact Info */
+
+    label, input, select, textarea, #submit {font-size: 14px;}
+    textarea {height: 180px;}
+    #form {width: 80%;}
+
+    .border {
+        width: 320px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    #header {
+        height: 70px;
+        font-size: 36px;
+        font-weight: 800;
+        padding-top: 10px;
+    }
+
+    body {font-size: 16px;}
+    h3 {font-size: 30px;}
+
+    div.wide {
+        width: 675px;
+        margin: 15px auto;
+    }
+    div.narrow {width: 675px;}
+
+    /* Navigation Pane */
+
+    .navpanel {height: 35px;}
+    .nav {
+        font-size: 20px;
+        height: 33px;
+        margin-top: 2px;
+        padding: 0 15px;
+    }
+
+    /* Services */
+
+    img.medium {
+        width: 285px;
+        height: 199px;
+    }
+
+    /* Paint Testing */
+
+    .wall-text {font-size: 14px;}
+    .ctest {font-size: 9px;}
+    div.pallette {margin: 4px 6px;}
+
+    div.paint {
+        width: 648px;
         height: 300px;
     }
-}
 
-@media (max-width: 1080px) and (min-width: 601px) {
-    .bg {
-        width: 450px;
+    .col-50-l img, .col-50-r img {
+        width: 324px;
+        height: 180px;
     }
 
-    .paint {
-        width: 720px;
+    button.c {
+        width: 30px;
+        height: 20px;
+        border-radius: 6px;
+    }
+
+    /* Gallery */
+
+    #shown {width: 520px;}
+
+    img.thumb {
+        width: 67px;
+        height: 45px;
+        margin-left: 1px;
+        margin-bottom: 1px;
+    }
+
+    /* Contact Info */
+
+    label, input, select, textarea, #submit {font-size: 12px;}
+    textarea {height: 160px;}
+    #form {width: 90%;}
+
+    .border {
+        width: 270px;
         height: 200px;
     }
-
-    .col-50-l img, .col-50-r img {
-        width: 180px;
-        height: 120px;
-    }
-
-    .from-top {
-        padding: 23px 0;
-        font-size: 12px;
-    }
 }
-
-@media (max-width: 1080px) and (min-width: 601px) {
-    .bg {
-        width: 450px;
-    }
-
-    .paint {
-        width: 360px;
-        height: 170px;
-    }
-
-    .col-50-l img, .col-50-r img {
-        width: 180px;
-        height: 120px;
-    }
-
-    .from-top {
-        padding: 23px 0;
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 600px) {
-    /* .bg {
-        width: 315px;
-    }
-
-    .paint {
-        width: 252px;
-        height: 119px;
-    }
-
-    .col-50-l img, .col-50-r img {
-        width: 126px;
-        height: 84px;
-    }
-
-    .from-top {
-        padding: 16px 0;
-        font-size: 10px;
-    }
-} */
