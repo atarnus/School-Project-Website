@@ -1,13 +1,15 @@
 /* To do:
-Colour picker button hover as doubletap in mobile
+Colour picker button hover as doubletap in mobile!
 Active thumbnail in gallery
-(Gallery next image)
+Gallery carousel
 
 Changes since last push:
 Navigating: Changed slideIn/Out (fast) into fadeIn/Out (400/0) for smoother feel.
  */
 
 $(document).ready(function(){
+
+    // alert("This page is a school project and still being updated. \nThe contact form will not save or send any data.");
                 
     // Page Navigation
 
@@ -98,6 +100,13 @@ $(document).ready(function(){
         $("#right-text").html("&nbsp;");                
     });
 
+    // Gallery Function
+
+    $(".thumb").click(function(){
+        let shownimage = $(this).attr("src");
+        $("#shown").attr("src", shownimage);
+    });
+
     // Links
 
     $("#fb-icon").hover(function(){
@@ -121,15 +130,12 @@ $(document).ready(function(){
         $(this).attr("src", "images/youtube.svg");                  
     });
 
-    $(".thumb").click(function(){
-        let shownimage = $(this).attr("src");
-        $("#shown").attr("src", shownimage);
-    });
-
 /*     $(".c").dblclick(function(){
         let cdblclick = $(this).css("background-color");
         $(".col-left").css("background-color", cdblclick);
     }); */
+
+    // Form Validation
 
     $("#submit").click(function(){
         if (document.forms["contactform"]["name"].value == "") {

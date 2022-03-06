@@ -1,11 +1,11 @@
 /* To do:
-More Scaling! + mobile-menu?
-Front Page background color? - dark footer? maybe baby?
-different images for mobile?
+Language menu
+Mobile-menu?
+Clean up
 
 Changes since last push:
-Paint testing div rehaul
-Scaling works down to 675px
+Narrower front page for mobile
+Scaling works down to 360px width
 */
 
 /* Header */
@@ -83,58 +83,6 @@ div.col-22 {
     clear: both;
 }
 
-/* Front Page */
-
-#p1 {
-    background-image: url("../images/frontpage3.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 1000px;
-}
-
-.noscroll {
-    overflow: hidden;
-}
-
-/* Texts */
-
-.cursive {
-    font-style: italic;
-}
-
-h1 {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 3vw;
-    font-weight: 800;
-    color: #b4cc82;
-    text-shadow: 3px 3px 2px #343148;
-    padding-top: 15%;
-}
-
-h2 {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    font-size: 2vw;
-    margin-bottom: 15%;
-}
-
-h3 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 34px;
-    font-weight: 700;
-    margin: 25px 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-a:hover, a:focus, a:active {
-    color: #ECF0E4;
-}
-
 /* Navigation Menu */
 
 .navpanel {
@@ -157,7 +105,7 @@ a:hover, a:focus, a:active {
     margin-top: 3px;
 }
 
-.nav:hover {
+button.nav:hover {
     color: #DDE0D6;
 }
 
@@ -166,6 +114,67 @@ a:hover, a:focus, a:active {
     text-shadow: 1px 0 1px;
     background-color: #A6A99F;
 }
+
+/* Front Page */
+
+#p1 {
+    background-image: url("../images/frontpage3.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1000px;
+    background-color: #0d0a13;
+}
+
+/* Texts */
+
+.cursive {
+    font-style: italic;
+}
+
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3vw;
+    font-weight: 800;
+    color: #b4cc82;
+    text-shadow: 3px 3px 2px #343148;
+    padding-top: 15%;
+    float: left;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 2vw;
+    margin-bottom: 15%;
+    float: left;
+}
+
+h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 34px;
+    font-weight: 700;
+    margin: 25px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover, a:focus, a:active {
+    color: #ECF0E4;
+}
+
+/* Footer */
+
+/* #footer {
+    background-color: #343148;
+    color:#A6A99F;
+    font-size: 1vw;
+    margin: 0 auto;
+    padding: 20px;
+} */
 
 /* Gallery & Images */
 
@@ -200,19 +209,19 @@ img.medium {
     height: 300px;
     border: solid 2px #8C8F85;
     border-radius: 10px;
-    margin-top: 25px;
+    margin: 20px 0 20px 0;
 }
 
 /* Icons */
 
 .icon {
-    width: 30px;
+    width: 7%;
     padding: 3px;
 }
 
 .icon-s {
-    height: "15px";
-    margin-bottom: -3px;
+    width: 4%;
+    vertical-align: middle;
 }
 
 /* Form */
@@ -229,17 +238,20 @@ label {
 input, select, textarea, #submit {
     box-sizing: border-box;
     margin-bottom: 5px;
-    height: 28px;
-    width: 100%;
     border-radius: 6px;
     font-size: 16px;
     background-color: #DDE0D6;
     border: 2px solid #8C8F85;
 }
 
+input, select, textarea {
+height: 28px;
+width: 100%;
+}
+
 #submit {
     float: left;
-    width: 25%;
+    padding: 2% 5%;
     background-color: #8C8F85;
     filter: drop-shadow(1px 1px 1px #343148)
 }
@@ -266,6 +278,7 @@ textarea {
 div.paint {
     width: 1296px;
     height: 600px;
+    margin-top: 10px;
 }
 
 div.pallette {
@@ -457,7 +470,7 @@ button.c:active {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 
     #header {
         height: 70px;
@@ -473,7 +486,7 @@ button.c:active {
         width: 675px;
         margin: 15px auto;
     }
-    div.narrow {width: 675px;}
+    div.narrow {width: 100%}
 
     /* Navigation Pane */
 
@@ -534,5 +547,236 @@ button.c:active {
     .border {
         width: 270px;
         height: 200px;
+    }
+}
+
+@media (max-width: 695px) {
+
+    #header {
+        height: 56px;
+        font-size: 29px;
+        padding-top: 8px;
+    }
+
+    body {font-size: 14px;}
+    h3 {font-size: 26px;}
+
+    div.wide {
+        width: 540px;
+        margin: 10px auto;
+    }
+    div.narrow {width: 80%}
+
+    div.col-50, div.col-50-c {
+        width: 100%;
+    }
+
+    /* Navigation Pane */
+
+    .navpanel {height: 60px;}
+    .nav {
+        font-size: 18px;
+        height: 30px;
+        margin: 0 25px;
+        padding: 0 10px;
+    }
+
+    .active, .active:hover {
+        color: #DDE0D6;
+        text-shadow: 1px 0 1px;
+        background-color: #343148;
+    }
+
+    /* Front Page */
+
+    #p1 {background-image: url("../images/frontpage_portrait.jpg");}
+    h1 {font-size: 6vw;}
+    h2 {
+        font-size: 4vw;
+        margin: 15%;
+    }
+
+    /* Services */
+
+    img.medium {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Paint Testing */
+
+    .wall-text {font-size: 12px;}
+    .ctest {font-size: 8px;}
+    div.pallette {margin: 5px 5px;}
+
+    #paint-top {
+        height: 35%;
+    }
+    
+    #paint-bottom {
+        height: 45%;
+    }
+
+    div.paint {
+        width: 518px;
+        height: 320px;
+    }
+
+    .col-50-l img, .col-50-r img {
+        width: 259px;
+        height: 144px;
+    }
+
+    button.c {
+        width: 24px;
+        height: 18px;
+        margin: 3px 0;
+    }
+
+    /* Gallery */
+
+    div.col-78, div.col-22 {
+        width: 100%;
+    }
+
+    div.col-22 {
+        margin-top: 10px;
+    }
+
+    #shown {width: 100%;}
+
+    img.thumb {
+        width: 98px;
+        height: 65px;
+        margin: 0 3px 3px 0;
+    }
+
+    /* Contact Info */
+
+    textarea {height: 150px;}
+    #form {width: 90%;}
+
+    .border {
+        width: 360px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    #header {
+        height: 45px;
+        font-size: 23px;
+        padding-top: 6px;
+    }
+
+    body {font-size: 12px;}
+    h3 {font-size: 22px; margin: 15px 0 0 0;}
+
+    div.wide {
+        width: 400px;
+        margin: 5px auto;
+    }
+
+    /* Navigation Menu */
+
+    .navpanel {height: 50px;}
+    .nav {
+        font-size: 16px;
+        height: 25px;
+        margin: 0 15px;
+    }
+
+    /* Paint Testing */
+
+    .wall-text {font-size: 11px;}
+    .ctest {font-size: 6px;}
+    div.pallette {margin: 3px 3px;}
+
+    div.paint {
+        width: 388px;
+        height: 240px;
+    }
+
+    .col-50-l img, .col-50-r img {
+        width: 194px;
+        height: 108px;
+    }
+
+    button.c {
+        width: 18px;
+        height: 15px;
+        border-radius: 5px;
+        margin: 2px 0;
+    }
+
+    /* Gallery */
+
+    img.thumb {
+        width: 70px;
+        height: 47px;
+        margin: 0 1px 1px 0;
+    }
+
+    /* Contact Info */
+
+    .border {
+        width: 288px;
+        height: 216px;
+    }
+}
+
+@media (max-width: 411px) {
+
+    #header {height: 40px; font-size: 20px;}
+
+    body {font-size: 10px;}
+    h3 {font-size: 18px; margin: 10px 0 0 0;}
+    div.wide {width: 350px;}
+    div.narrow {width: 80%}
+
+    /* Navigation Menu */
+
+    .navpanel {height: 40px;}
+    .nav {
+        font-size: 14px;
+        height: 20px;
+        margin: 0 12px;
+    }
+
+    /* Paint Testing */
+
+    .wall-text {font-size: 11px;}
+    .ctest {font-size: 5.5px;}
+    div.pallette {margin: 4px 3px;}
+    
+    div.paint {
+        width: 348px;
+        height: 215px;
+    }
+    
+    .col-50-l img, .col-50-r img {
+        width: 174px;
+        height: 97px;
+    }
+    
+    button.c {
+        width: 15px;
+        height: 13px;
+        border-radius: 4px;
+    }
+
+    /* Gallery */
+
+    img.thumb {
+        width: 62px;
+        height: 41px;
+    }
+
+    /* Contact Info */
+
+    .border {
+        width: 240px;
+        height: 180px;
     }
 }
